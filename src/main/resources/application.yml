@@ -1,0 +1,7 @@
+security:
+  user:
+    password: password
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.hibernate.SQL: TRACE

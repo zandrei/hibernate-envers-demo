@@ -1,0 +1,14 @@
+<div ng-controller="product">
+	<button type="button" id="addData" class="btn btn-success" ng-click="addData()">Add Data</button>
+	<button type="button" id="submit" class="btn btn-success" ng-click="submit()">Submit</button>
+	<button type="button" id="delete" class="btn btn-success" ng-disabled="gridProductApi.selection.getSelectedRows().length == 0" ng-click="deleteRows()">Delete selected row</button>
+	
+	<div ui-grid="gridProduct" ui-grid-edit ui-grid-row-edit ui-grid-selection
+		ui-grid-cellNav class="grid"></div>
+	<br/>
+	<br/>
+	<button type="button" id="addDataDetails" class="btn btn-success" ng-disabled="selectedProduct == undefined" ng-click="addDataDetails()">Add row</button>	
+	<button type="button" id="deleteDetails" class="btn btn-success" ng-disabled="gridProductDetailsApi.selection.getSelectedRows().length == 0" ng-click="deleteRowsDetails()">Delete selected row</button>
+	<div ui-grid="gridProductDetails" ui-grid-edit ui-grid-row-edit ui-grid-selection
+		ui-grid-cellNav class="grid"></div>
+</div>
